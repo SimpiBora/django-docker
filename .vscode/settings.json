@@ -1,0 +1,16 @@
+// This file contains the settings for the Visual Studio Code editor with ruff
+// It configures the Python extension to use specific linting and formatting tools.
+{
+    "[python]": {
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit",
+            "source.fixAll": "explicit"
+        },
+        "editor.defaultFormatter": "charliermarsh.ruff",
+    },
+    "editor.rulers": [
+        80,
+        120
+    ],
+}

@@ -1,18 +1,22 @@
-# For more information, please refer to https://aka.ms/vscode-docker-python
-FROM python:3.12
+# Use official Python image
+FROM python:3.13.2-alpine3.21
 
-# Set environment variables
-ENV PYTHONDONTWRITEBYTECODE=1
-ENV PYTHONUNBUFFERED=1
-
-# Set work directory
+# Set working directory
 WORKDIR /app
 
+# Install system dependencies required for psycopg2
+RUN apk add --no-cache \
+    postgresql-dev \
+    gcc \
+    musl-dev \
+    libffi-dev \
+    python3-dev
+
+# Copy project files
+COPY requirements.txt .
+
 # Install dependencies
-COPY requirements.txt /app/
-RUN pip install --upgrade pip && pip install -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy project
-COPY . /app/
-
+# Expose port
 EXPOSE 8000

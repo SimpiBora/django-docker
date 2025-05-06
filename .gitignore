@@ -1,0 +1,77 @@
+# **Python Ignore Files**
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# **Django-Specific Ignore**
+db.sqlite3
+*.sqlite3
+*.log
+media/
+staticfiles/
+
+# **Virtual Environment**
+venv/
+env/
+*.venv
+
+# **Environment Variables & Secrets**
+.env
+.env.local
+.env.production
+.env.*
+
+# **IDE & Editor Files**
+.idea/
+*.swp
+*.swo
+
+# **Migrations (Optional)**
+**/migrations/*.py
+!**/migrations/__init__.py
+
+# **Docker Ignore (If using Docker)**
+*.pid
+*.tar
+*.log
+
+# **Compiled Code**
+*.so
+*.dll
+*.dylib
+
+# **Node Modules (if using JavaScript frontend)**
+node_modules/
+npm-debug.log
+
+# **MacOS & System Files**
+.DS_Store
+Thumbs.db
+
+
+add here all the files you want to ignore
+# ** docker related files **
+docker-compose.override.yml
+docker-compose.override.yml
+docker-compose.override.yml
+docker-compose.override.yml
+docker-compose.override.yml
+docker-compose.override.yml
+docker-compose.override.yml
+docker-compose.override.yml
+docker-compose.override.yml
+docker-compose.override.yml
+docker-compose.override.yml
+you seggest me to add this file to .gitignore
+# ** IDE related files **
+.idea/
+# ** Python related files **
+*.pyc
+*.pyo
+*.pyd       
+*.pdb
+*.egg-info/
+*.egg
+
+# ** 
